@@ -1,4 +1,4 @@
-# Banking Application: Small Todo
+# Banking Application:
 
 ## Table of Contents
 - [Introduction](#introduction)
