@@ -9,5 +9,4 @@ public class BankingApplicationSmallTodoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BankingApplicationSmallTodoApplication.class, args);
 	}
-
 }
