@@ -15,7 +15,7 @@ This banking application project serves as a small-scale training exercise, desi
 ## Prerequisites
 - Java JDK (JDK 17 or higher)
 - Maven
-- Database (PostgreSQL)
+- Database (H2 Database)
 
 ## API Endpoints
 
