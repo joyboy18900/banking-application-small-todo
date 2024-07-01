@@ -33,7 +33,7 @@ public class AccountController {
 
     @GetMapping("/{id}")
     public ResponseEntity<AccountResponse> getAccount(@PathVariable Long id) {
-        Account account = accountService.getAccount(id).orElseThrow(() -> new RuntimeException("Account not found"));
+        Account account = accountService.getAccount(id).orElseThrow(() -> new AccountNotFoundException(""));
 
         List<Account> accountList = new ArrayList<>();
         accountList.add(new Account(account.getId(), account.getAccountHolderName(), account.getBalance()));
