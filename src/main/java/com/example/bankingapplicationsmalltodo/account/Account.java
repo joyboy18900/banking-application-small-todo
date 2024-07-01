@@ -7,18 +7,19 @@ import jakarta.persistence.*;
 public class Account {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "owner_name")
     private String accountHolderName;
 
     @Column(name = "balance")
-    private double balance;
+    private Double balance;
 
     public Account() {
     }
 
-    public Account(Long id, String accountHolderName, double balance) {
+    public Account(Long id, String accountHolderName, Double balance) {
         this.id = id;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
@@ -40,11 +41,20 @@ public class Account {
         this.accountHolderName = accountHolderName;
     }
 
-    public double getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", accountHolderName='" + accountHolderName + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }
