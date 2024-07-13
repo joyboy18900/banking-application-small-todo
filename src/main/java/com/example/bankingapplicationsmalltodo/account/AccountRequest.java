@@ -1,7 +1,18 @@
 package com.example.bankingapplicationsmalltodo.account;
 
+import com.example.bankingapplicationsmalltodo.account.validate.AccountHolderNameValidate;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+
 public class AccountRequest {
+
+//    @AccountHolderNameValidate
+    @NotEmpty
     private String accountHolderName;
+
+    @Min(0)
+    @Max(100000)
     private Double balance;
 
     public String getAccountHolderName() {

@@ -1,5 +1,6 @@
 package com.example.bankingapplicationsmalltodo.account;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class AccountController {
     private AccountService accountService;
 
     @PostMapping
-    public ResponseEntity<AccountResponse> createAccount(@RequestBody AccountRequest accountRequest) {
+    public ResponseEntity<AccountResponse> createAccount(@Valid @RequestBody AccountRequest accountRequest) {
         Account account = accountService.createAccount(accountRequest);
 
         List<Account> accountList = new ArrayList<>();
